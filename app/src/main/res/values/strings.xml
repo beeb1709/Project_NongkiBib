@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">NongkiBib</string>
+    <string name="slogan">Nongkrong &amp; Produktif</string>
+    <string name="welcome_message">Selamat Datang Produktif</string>
+    <string name="nongki_bib">Nongki\nBib</string>
+    <string name="connecting_awardees">Connecting Awardees</string>
+    <string name="welcome_awardee">Selamat Datang, Awardee!</string>
+    <string name="welcome_subtitle">Temukan Keseruan Nongkrong &amp; Jaringan.</string>
+    <string name="bib_spots_nearby">BIB Spots Terdekat</string>
+    <string name="recommendation_title">Rekomendasi Hari Ini</string>
+    <string name="find_friends">Cari Teman Satu Kampus</string>
+    <string name="nearby_events">Acara Nongki Terdekat</string>
+    <string name="interest_groups">Grup Minat &amp; Bakat</string>
+
+    <string name="nav_home">Beranda</string>
+    <string name="nav_map">Peta</string>
+    <string name="nav_acara">Acara</string>
+    <string name="nav_inbox">Pesan</string>
+    <string name="nav_profile">Profil</string>
+
+    <string name="desc_logo">Logo Nongki Bib</string>
+    <string name="desc_map">Peta Lokasi</string>
+    <string name="desc_add">Tambah Ajakan</string>
+
+    <!-- Map & Location Strings -->
+    <string name="search_hint">Search filter tempat</string>
+    <string name="type_place">Tipe Tempat</string>
+    <string name="bib_year">Tahun BIB</string>
+    <string name="bib_spots">BIB Spots</string>
+    <string name="teman_nongki">Teman Nongki</string>
+    <string name="user_name">Budi</string>
+    <string name="bib_label">BIB Member</string>
+    <string name="filter_cafe">Cafe</string>
+    <string name="filter_perpus">Perpus</string>
+    <string name="filter_taman">Taman</string>
+    <string name="filter_univ">Universitas</string>
+    <string name="btn_new_location">Daftar Lokasi Baru</string>
+    <string name="btn_make_appointment">Buat Janji Ketemu</string>
+    <string name="cafe_sudut">Cafe Sudut</string>
+    <string name="cafe_sudut_desc">8 orang sedang nongki</string>
+    <string name="perpus_pusat">Perpus Pusat</string>
+    <string name="perpus_pusat_desc">23 orang sedang belajar</string>
+    <string name="Taman_Literasi">Taman Literasi</string>
+    <string name="Taman_Literasi_desc">Live music Slank</string>
+
+    <!-- Events & Community Strings -->
+    <string name="events_title">BIB Hub</string>
+    <string name="tab_local">Lokal</string>
+    <string name="tab_national">Nasional</string>
+    <string name="tab_online">Online</string>
+    <string name="btn_join">Gabung</string>
+    <string name="my_program_groups">BIB Acara</string>
+    <string name="my_community_groups">Komunitas BIB</string>
+
+    <string name="event_1_title">Kopi Santai Alumni BIB UGM</string>
+    <string name="event_1_time">Today, 18:00</string>
+    <string name="event_1_part">10 participants</string>
+
+    <string name="event_2_title">Webinar Karir Post-BIB</string>
+    <string name="event_2_time">Besok, 18:00</string>
+    <string name="event_2_part">50 participants</string>
+
+    <string name="event_3_title">Futsal Bareng BIB Jakarta</string>
+    <string name="event_3_time">Sabtu, 08:00</string>
+    <string name="event_3_part">12 participants</string>
+
+    <string name="event_4_title">Gathering Akbar Nasional</string>
+    <string name="event_4_time">Minggu depan, Jakarta</string>
+    <string name="event_4_part">100+ participants</string>
+
+    <string name="group_1_name">BIB 2023 Tebet</string>
+    <string name="group_1_desc">Group chat, 3 orang sedang nongki</string>
+
+    <string name="group_2_name">Pecinta Kopi</string>
+    <string name="group_2_desc">Si Paling Pecinta Kopi</string>
+
+    <string name="group_3_name">Awardee BIB Jakarta</string>
+    <string name="group_3_desc">Regional Jakarta &amp; sekitarnya</string>
+
+    <string name="group_4_name">Info Beasiswa BIB</string>
+    <string name="group_4_desc">Informasi beasiswa BIB terbaru</string>
+    <string name="bib_label_short">BIB</string>
+    <string name="points_label">BIB Points</string>
+    <string name="timer_label">Sisa Waktu Nongki</string>
+    <string name="start_nongki">Mulai Nongki Produktif</string>
+    <string name="stop_nongki">Selesai Nongki</string>
+    <string name="task_warning">Awas! Ada tugas mendekati deadline.</string>
+    <string name="penalty_warning">Hati-hati! Penalti menanti jika melewati batas.</string>
+    <string name="see_more">Lihat Selengkapnya</string>
+</resources>

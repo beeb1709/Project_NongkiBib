@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- NongkiBib Colors based on Logo -->
+    <color name="primary">#7B5A3E</color> <!-- Coklat Tua -->
+    <color name="primary_dark">#5D432D</color> <!-- Coklat Lebih Tua -->
+    <color name="accent">#D4AF37</color> <!-- Emas -->
+    <color name="bg_light">#FDFBF7</color> <!-- Krem  -->
+    <color name="text_dark">#2C2219</color> <!-- Hampir Hitam Coklat -->
+    <color name="text_grey">#8D7B6D</color> <!-- Coklat Abu-abu -->
+
+    <!-- Additional Colors -->
+    <color name="tab_active">#114C5F</color>
+    <color name="tab_inactive">#DDDDDD</color>
+    <color name="grey_light">#EEEEEE</color>
+    <color name="divider">#EEEEEE</color>
+
+    <color name="teal_dark">#114C5F</color>
+    <color name="teal_accent">#2AB3B6</color>
+    <color name="warning_orange">#E65100</color>
+    <color name="warning_bg">#FFF3E0</color>
+    <color name="brown_card">#4D3B2A</color>
+    <color name="blue_card">#1E3A46</color>
+    <color name="orange_accent">#F58220</color>
+    <color name="white_translucent">#B0FFFFFF</color>
+</resources>
