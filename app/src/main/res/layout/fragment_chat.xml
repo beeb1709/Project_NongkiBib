@@ -39,14 +39,26 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- RecyclerView Chat (Meeting 7: List Mode) -->
+    <TextView
+        android:id="@+id/tv_offline_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5252"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Tidak ada koneksi internet"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/chat_header" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@id/layout_input"
-        app:layout_constraintTop_toBottomOf="@id/chat_header" />
+        app:layout_constraintTop_toBottomOf="@id/tv_offline_banner" />
 
     <!-- Input Chat -->
     <LinearLayout

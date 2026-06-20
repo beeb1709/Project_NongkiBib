@@ -1,12 +1,16 @@
 package com.example.nongkibib
 
+import android.content.Intent
+import android.content.IntentFilter
+import android.location.LocationManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var receiver: NongkiBroadcastReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +45,27 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        receiver = NongkiBroadcastReceiver()
+        val filter = IntentFilter().apply {
+            addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+            addAction(Intent.ACTION_BATTERY_LOW)
+            addAction(Intent.ACTION_POWER_CONNECTED)
+            addAction(Intent.ACTION_POWER_DISCONNECTED)
+            addAction("android.provider.Telephony.SMS_RECEIVED")
+            addAction("android.net.conn.CONNECTIVITY_CHANGE")
+            addAction("android.net.wifi.WIFI_STATE_CHANGED")
+            addAction(LocationManager.PROVIDERS_CHANGED_ACTION)
+        }
+        registerReceiver(receiver, filter)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(receiver)
     }
 
     private fun loadFragment(fragment: Fragment) {
