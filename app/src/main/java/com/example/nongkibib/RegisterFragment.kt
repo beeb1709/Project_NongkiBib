@@ -25,7 +25,6 @@ class RegisterFragment : Fragment() {
 
         btnRegister.setOnClickListener {
             Toast.makeText(context, "Pendaftaran Berhasil!", Toast.LENGTH_SHORT).show()
-            // Simulasi masuk ke MainActivity setelah daftar
             startActivity(Intent(requireContext(), MainActivity::class.java))
             activity?.finish()
         }
@@ -39,7 +38,6 @@ class RegisterFragment : Fragment() {
         }
 
         tvLogin.setOnClickListener {
-            // Pindah ke LoginFragment
             val fragmentManager = parentFragmentManager
             fragmentManager.beginTransaction()
                 .replace(R.id.auth_container, LoginFragment())

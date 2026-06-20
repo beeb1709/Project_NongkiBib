@@ -23,50 +23,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_normal"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <!-- BIB Label Mock -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_marginStart="@dimen/spacing_small">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="@dimen/avatar_size_small"
-                    android:layout_height="@dimen/avatar_size_small"
-                    app:cardCornerRadius="18dp"
-                    app:cardElevation="0dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/bib_label_short"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textColor="@color/primary"
-                        android:textSize="@dimen/text_size_medium"/>
-                </androidx.cardview.widget.CardView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bib_label"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_small"
-                    android:textStyle="bold"
-                    android:background="@drawable/bg_label_dark"
-                    android:paddingHorizontal="4dp"
-                    android:layout_marginTop="-4dp"/>
-            </LinearLayout>
-        </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -89,7 +45,6 @@
                 android:textSize="@dimen/text_size_header"
                 android:textStyle="bold" />
 
-            <!-- Tabs Mock -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -146,7 +101,6 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
-            <!-- Event List Mock 1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -208,7 +162,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Event List Mock 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -270,7 +223,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Event List Mock 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -355,7 +307,6 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
-            <!-- Community List Mock 1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -368,7 +319,6 @@
                     android:padding="12dp"
                     android:gravity="center_vertical">
 
-                    <!-- Avatar Image -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/avatar_size_medium"
                         android:layout_height="@dimen/avatar_size_medium"
@@ -404,7 +354,6 @@
                             android:textColor="@color/text_grey"/>
                     </LinearLayout>
 
-                    <!-- Chat Icon -->
                     <ImageView
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="@dimen/spacing_large"
@@ -414,7 +363,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Community List Mock 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -427,7 +375,6 @@
                     android:padding="12dp"
                     android:gravity="center_vertical">
 
-                    <!-- Avatar Image -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/avatar_size_medium"
                         android:layout_height="@dimen/avatar_size_medium"
@@ -463,7 +410,6 @@
                             android:textColor="@color/text_grey"/>
                     </LinearLayout>
 
-                    <!-- Chat Icon -->
                     <ImageView
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="@dimen/spacing_large"
@@ -472,7 +418,6 @@
                         android:contentDescription="@string/nav_inbox" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <!-- Community List Mock 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -486,7 +431,6 @@
                     android:padding="12dp"
                     android:gravity="center_vertical">
 
-                    <!-- Avatar Image -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/avatar_size_medium"
                         android:layout_height="@dimen/avatar_size_medium"
@@ -522,7 +466,6 @@
                             android:textColor="@color/text_grey"/>
                     </LinearLayout>
 
-                    <!-- Chat Icon -->
                     <ImageView
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="@dimen/spacing_large"
