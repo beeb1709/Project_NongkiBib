@@ -21,7 +21,7 @@ class InboxFragment : Fragment() {
         chat1.setOnClickListener { openChat("Zhou Koo Wii - BIB 2024") }
         chat2.setOnClickListener { openChat("Prabowo (Ketua Angkatan)") }
 
-        return
+        return view
     }
 
     private fun openChat(name: String) {
