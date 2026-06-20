@@ -38,7 +38,6 @@ class LoginFragment : Fragment() {
         }
 
         tvRegister.setOnClickListener {
-            // Pindah kembali ke RegisterFragment
             parentFragmentManager.beginTransaction()
                 .replace(R.id.auth_container, RegisterFragment())
                 .addToBackStack(null)

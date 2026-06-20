@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Custom Header Background (Rounded bottom) -->
     <View
         android:id="@+id/header_bg"
         android:layout_width="match_parent"
@@ -14,7 +13,6 @@
         android:background="@drawable/bg_header_home"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Top Toolbar Content -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -23,7 +21,6 @@
         android:paddingTop="12dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Logo & Title -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +55,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Profile Avatars -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +64,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-            <!-- Siti -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,7 +94,6 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Content Scroll -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -113,7 +107,6 @@
             android:orientation="vertical"
             android:paddingBottom="80dp">
 
-            <!-- Productivity Card (Timer & Points) -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -192,7 +185,6 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Warning Message -->
                     <LinearLayout
                         android:id="@+id/layout_warning"
                         android:layout_width="match_parent"
@@ -220,7 +212,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Welcome Banner -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -233,7 +224,6 @@
                     android:layout_height="110dp"
                     android:background="@color/teal_dark"
                     android:padding="20dp">
-                    <!-- Background abstract shapes could be images here -->
                     <TextView
                         android:id="@+id/tv_welcome"
                         android:layout_width="wrap_content"
@@ -253,7 +243,6 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Map Section -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
@@ -266,9 +255,6 @@
                     android:src="@android:drawable/ic_dialog_map"
                     app:tint="@color/grey_light" />
 
-                <!-- Mock Pins -->
-                <!-- Use custom layout for pins as seen in image -->
-                <!-- JAKARTA center text -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

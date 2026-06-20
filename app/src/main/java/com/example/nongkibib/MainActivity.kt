@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
-        // Set default fragment
         loadFragment(HomeFragment())
 
         navView.setOnItemSelectedListener { item ->
@@ -51,9 +50,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// Simple Fragments classes
 class HomeFragment : Fragment(R.layout.fragment_home)
 class MapFragment : Fragment(R.layout.fragment_map)
 class AcaraFragment : Fragment(R.layout.fragment_acara)
-class InboxFragment : Fragment(R.layout.fragment_inbox)
 class ProfileFragment : Fragment(R.layout.fragment_profile)
