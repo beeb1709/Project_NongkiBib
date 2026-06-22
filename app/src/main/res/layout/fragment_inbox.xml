@@ -40,23 +40,23 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_profile_header"
                     android:layout_width="@dimen/avatar_size_small"
                     android:layout_height="@dimen/avatar_size_small"
                     app:cardCornerRadius="18dp"
                     app:cardElevation="0dp">
-                    <TextView
+                    <ImageView
+                        android:id="@+id/iv_profile_header"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="@string/bib_label_short"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textColor="@color/primary"
-                        android:textSize="@dimen/text_size_medium" />
+                        android:src="@drawable/profile_habibie"
+                        android:scaleType="centerCrop" />
                 </androidx.cardview.widget.CardView>
                 <TextView
+                    android:id="@+id/tv_profile_name_header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bib_label"
+                    android:text="Habibie"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"

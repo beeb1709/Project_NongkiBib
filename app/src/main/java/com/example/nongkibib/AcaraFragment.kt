@@ -5,19 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class InboxFragment : Fragment() {
+class AcaraFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_inbox, container, false)
+        val view = inflater.inflate(R.layout.fragment_acara, container, false)
 
         val profileHeader = view.findViewById<CardView>(R.id.cv_profile_header)
         val ivProfile = view.findViewById<ImageView>(R.id.iv_profile_header)
@@ -40,24 +39,6 @@ class InboxFragment : Fragment() {
             navView?.selectedItemId = R.id.nav_home
         }
 
-        val chat1 = view.findViewById<RelativeLayout>(R.id.chat_item_1)
-        val chat2 = view.findViewById<RelativeLayout>(R.id.chat_item_2)
-
-        chat1.setOnClickListener { openChat("Zhou Koo Wii - BIB 2024") }
-        chat2.setOnClickListener { openChat("Prabowo (Ketua Angkatan)") }
-
         return view
-    }
-
-    private fun openChat(name: String) {
-        val fragment = ChatFragment()
-        val bundle = Bundle()
-        bundle.putString("CHAT_NAME", name)
-        fragment.arguments = bundle
-
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
     }
 }
