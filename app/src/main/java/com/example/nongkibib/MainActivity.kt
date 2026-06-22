@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.location.LocationManager
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -73,9 +74,10 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_container, fragment)
         transaction.commit()
     }
+
+    fun setBottomNavigationVisibility(isVisible: Boolean) {
+        val bottomAppBar: View = findViewById(R.id.bottomAppBar)
+        bottomAppBar.visibility = if (isVisible) View.VISIBLE else View.GONE
+    }
 }
 
-class HomeFragment : Fragment(R.layout.fragment_home)
-class MapFragment : Fragment(R.layout.fragment_map)
-class AcaraFragment : Fragment(R.layout.fragment_acara)
-class ProfileFragment : Fragment(R.layout.fragment_profile)

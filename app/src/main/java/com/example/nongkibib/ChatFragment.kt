@@ -68,6 +68,16 @@ class ChatFragment : Fragment() {
         return view
     }
 
+    override fun onStart() {
+        super.onStart()
+        (activity as? MainActivity)?.setBottomNavigationVisibility(false)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as? MainActivity)?.setBottomNavigationVisibility(true)
+    }
+
     private fun sendMessage(text: String, isMe: Boolean) {
         val currentTime = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
         messages.add(ChatMessage(text, currentTime, isMe))
