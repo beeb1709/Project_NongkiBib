@@ -6,41 +6,58 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var receiver: NongkiBroadcastReceiver
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val navView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        viewPager = findViewById(R.id.viewPager)
 
-        loadFragment(HomeFragment())
+        val adapter = MainPagerAdapter(this)
+        viewPager.adapter = adapter
 
+        // Sinkronisasi ViewPager swipe ke BottomNav
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                when (position) {
+                    0 -> navView.selectedItemId = R.id.nav_home
+                    1 -> navView.selectedItemId = R.id.nav_map
+                    2 -> navView.selectedItemId = R.id.nav_acara
+                    3 -> navView.selectedItemId = R.id.nav_inbox
+                    4 -> navView.selectedItemId = R.id.nav_profile
+                }
+            }
+        })
+
+        // Sinkronisasi BottomNav click ke ViewPager
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    loadFragment(HomeFragment())
+                    viewPager.currentItem = 0
                     true
                 }
                 R.id.nav_map -> {
-                    loadFragment(MapFragment())
+                    viewPager.currentItem = 1
                     true
                 }
                 R.id.nav_acara -> {
-                    loadFragment(AcaraFragment())
+                    viewPager.currentItem = 2
                     true
                 }
                 R.id.nav_inbox -> {
-                    loadFragment(InboxFragment())
+                    viewPager.currentItem = 3
                     true
                 }
                 R.id.nav_profile -> {
-                    loadFragment(ProfileFragment())
+                    viewPager.currentItem = 4
                     true
                 }
                 else -> false
@@ -69,15 +86,9 @@ class MainActivity : AppCompatActivity() {
         unregisterReceiver(receiver)
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.commit()
-    }
-
     fun setBottomNavigationVisibility(isVisible: Boolean) {
         val bottomAppBar: View = findViewById(R.id.bottomAppBar)
         bottomAppBar.visibility = if (isVisible) View.VISIBLE else View.GONE
+        viewPager.isUserInputEnabled = isVisible
     }
 }
-
