@@ -10,15 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="70dp"
         android:background="@color/primary"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="@dimen/spacing_large"
-            android:layout_height="@dimen/spacing_large"
-            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/ic_back"
             android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_normal"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,8 +41,8 @@
                 android:orientation="vertical">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_profile_header"
-                    android:layout_width="@dimen/avatar_size_small"
-                    android:layout_height="@dimen/avatar_size_small"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     app:cardCornerRadius="18dp"
                     app:cardElevation="0dp">
                     <ImageView
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:text="Habibie"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_small"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:background="@drawable/bg_label_dark"
                     android:paddingHorizontal="4dp"
