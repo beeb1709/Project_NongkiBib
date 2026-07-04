@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.card.MaterialCardView
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -32,7 +32,7 @@ class ChatFragment : Fragment() {
         rvChat = view.findViewById(R.id.rv_chat)
         val btnBack = view.findViewById<ImageView>(R.id.btn_back_chat)
         val etChat = view.findViewById<EditText>(R.id.et_chat)
-        val btnSend = view.findViewById<ImageButton>(R.id.btn_send)
+        val btnSend = view.findViewById<MaterialCardView>(R.id.btn_send)
         val tvChatName = view.findViewById<TextView>(R.id.tv_chat_name)
 
         val chatName = arguments?.getString("CHAT_NAME") ?: "Budi (BIB 2023)"

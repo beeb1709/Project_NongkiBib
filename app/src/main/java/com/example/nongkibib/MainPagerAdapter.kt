@@ -10,8 +10,8 @@ class MainPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> HomeFragment()
-            1 -> MapFragment()
-            2 -> AcaraFragment()
+            1 -> AcaraFragment()
+            2 -> MapFragment()
             3 -> InboxFragment()
             4 -> ProfileFragment()
             else -> HomeFragment()

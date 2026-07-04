@@ -21,22 +21,15 @@ class MapFragment : Fragment() {
         val profileHeader = view.findViewById<CardView>(R.id.cv_profile_header)
         val ivProfile = view.findViewById<ImageView>(R.id.iv_profile_header)
         val tvName = view.findViewById<TextView>(R.id.tv_profile_name_header)
-        val btnBack = view.findViewById<ImageView>(R.id.btn_back)
 
         // Integrasi data user
         ivProfile.setImageResource(R.drawable.profile_habibie)
-        tvName.text = "Habibie"
+        tvName.text = "BIB Spots"
 
         profileHeader.setOnClickListener {
             val activity = activity as? MainActivity
             val navView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
             navView?.selectedItemId = R.id.nav_profile
-        }
-
-        btnBack.setOnClickListener {
-            val activity = activity as? MainActivity
-            val navView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-            navView?.selectedItemId = R.id.nav_home
         }
 
         return view

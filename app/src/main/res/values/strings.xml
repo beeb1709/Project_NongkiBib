@@ -1,101 +1,245 @@
 <resources>
     <string name="app_name">NongkiBib</string>
-    <string name="slogan">Nongkrong &amp; Produktif</string>
-    <string name="welcome_message">Selamat Datang Produktif</string>
+    <string name="slogan">Hangout &amp; Productive</string>
+    <string name="welcome_message">Welcome Productive</string>
     <string name="nongki_bib">Nongki\nBib</string>
     <string name="connecting_awardees">Connecting Awardees</string>
-    <string name="welcome_awardee">Selamat Datang, Awardee!</string>
-    <string name="welcome_subtitle">Temukan Keseruan Nongkrong &amp; Jaringan.</string>
-    <string name="bib_spots_nearby">BIB Spots Terdekat</string>
-    <string name="recommendation_title">Rekomendasi Hari Ini</string>
-    <string name="find_friends">Cari Teman Satu Kampus</string>
-    <string name="nearby_events">Acara Nongki Terdekat</string>
-    <string name="interest_groups">Grup Minat &amp; Bakat</string>
+    <string name="welcome_awardee">Welcome, Awardee!</string>
+    <string name="welcome_subtitle">Find the fun of hanging out &amp; networking.</string>
+    <string name="bib_spots_nearby">Nearby BIB Spots</string>
+    <string name="recommendation_title">Today\'s Recommendation</string>
+    <string name="find_friends">Find Campus Friends</string>
+    <string name="nearby_events">Nearby Hangout Events</string>
+    <string name="interest_groups">Interest &amp; Talent Groups</string>
 
-    <string name="nav_home">Beranda</string>
-    <string name="nav_map">Peta</string>
-    <string name="nav_acara">Acara</string>
-    <string name="nav_inbox">Pesan</string>
-    <string name="nav_profile">Profil</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_map">Spots</string>
+    <string name="nav_acara">Hub</string>
+    <string name="nav_inbox">Chat</string>
+    <string name="nav_profile">Profile</string>
 
-    <string name="desc_logo">Logo Nongki Bib</string>
-    <string name="desc_map">Peta Lokasi</string>
-    <string name="desc_add">Tambah Ajakan</string>
+    <string name="desc_logo">Nongki Bib Logo</string>
+    <string name="desc_notifications">Notifications</string>
+    <string name="desc_star">Star Decoration</string>
+    <string name="desc_timer_history">Timer History</string>
+    <string name="desc_map">Location Map</string>
+    <string name="desc_add">Add Invitation</string>
 
     <!-- Map & Location Strings -->
-    <string name="search_hint">Search filter tempat</string>
-    <string name="type_place">Tipe Tempat</string>
-    <string name="bib_year">Tahun BIB</string>
+    <string name="search_hint">Search place filter</string>
+    <string name="type_place">Place Type</string>
+    <string name="bib_year">BIB Year</string>
     <string name="bib_spots">BIB Spots</string>
-    <string name="teman_nongki">Teman Nongki</string>
+    <string name="teman_nongki">Hangout Friends</string>
     <string name="user_name">Budi</string>
     <string name="bib_label">BIB Member</string>
     <string name="filter_cafe">Cafe</string>
-    <string name="filter_perpus">Perpus</string>
-    <string name="filter_taman">Taman</string>
-    <string name="filter_univ">Universitas</string>
-    <string name="btn_new_location">Daftar Lokasi Baru</string>
-    <string name="btn_make_appointment">Buat Janji Ketemu</string>
-    <string name="cafe_sudut">Cafe Sudut</string>
-    <string name="cafe_sudut_desc">8 orang sedang nongki</string>
-    <string name="perpus_pusat">Perpus Pusat</string>
-    <string name="perpus_pusat_desc">23 orang sedang belajar</string>
-    <string name="Taman_Literasi">Taman Literasi</string>
-    <string name="Taman_Literasi_desc">Live music Slank</string>
+    <string name="filter_perpus">Library</string>
+    <string name="filter_taman">Park</string>
+    <string name="filter_univ">University</string>
+    <string name="btn_new_location">Register New Location</string>
+    <string name="btn_make_appointment">Make an Appointment</string>
+    <string name="cafe_sudut">Corner Cafe</string>
+    <string name="cafe_sudut_desc">8 people hanging out</string>
+    <string name="perpus_pusat">Central Library</string>
+    <string name="perpus_pusat_desc">23 people studying</string>
+    <string name="Taman_Literasi">Literacy Park</string>
+    <string name="Taman_Literasi_desc">Slank live music</string>
 
-    <!-- Events & Community Strings -->
-    <string name="events_title">BIB Hub</string>
-    <string name="tab_local">Lokal</string>
-    <string name="tab_national">Nasional</string>
-    <string name="tab_online">Online</string>
-    <string name="btn_join">Gabung</string>
-    <string name="my_program_groups">BIB Acara</string>
-    <string name="my_community_groups">Komunitas BIB</string>
-
-    <string name="event_1_title">Kopi Santai Alumni BIB UGM</string>
-    <string name="event_1_time">Today, 18:00</string>
-    <string name="event_1_part">10 participants</string>
-
-    <string name="event_2_title">Webinar Karir Post-BIB</string>
-    <string name="event_2_time">Besok, 18:00</string>
-    <string name="event_2_part">50 participants</string>
-
-    <string name="event_3_title">Futsal Bareng BIB Jakarta</string>
-    <string name="event_3_time">Sabtu, 08:00</string>
-    <string name="event_3_part">12 participants</string>
-
-    <string name="event_4_title">Gathering Akbar Nasional</string>
-    <string name="event_4_time">Minggu depan, Jakarta</string>
-    <string name="event_4_part">100+ participants</string>
-
-    <string name="group_1_name">BIB 2023 Tebet</string>
-    <string name="group_1_desc">Group chat, 3 orang sedang nongki</string>
-
-    <string name="group_2_name">Pecinta Kopi</string>
-    <string name="group_2_desc">Si Paling Pecinta Kopi</string>
-
-    <string name="group_3_name">Awardee BIB Jakarta</string>
-    <string name="group_3_desc">Regional Jakarta &amp; sekitarnya</string>
-
-    <string name="group_4_name">Info Beasiswa BIB</string>
-    <string name="group_4_desc">Informasi beasiswa BIB terbaru</string>
+    <!-- Hub Strings -->
+    <string name="hub_title">BIB Hub</string>
+    <string name="hub_search_hint">Search programs, events, scholarships…</string>
+    <string name="hub_discover_title">Discover Events</string>
+    <string name="hub_tab_local">Local</string>
+    <string name="hub_tab_national">National</string>
+    <string name="hub_tab_online">Online</string>
+    <string name="hub_tab_regional">Regional</string>
+    <string name="hub_tag_scholarship">SCHOLARSHIP</string>
+    <string name="hub_tag_open">OPEN</string>
+    <string name="hub_tag_closed">CLOSED</string>
+    <string name="hub_btn_join">JOIN</string>
+    <string name="hub_btn_register">REGISTER</string>
+    <string name="hub_btn_closed">CLOSED</string>
+    <string name="hub_active_discussions">Active Discussions</string>
+    <string name="hub_date_sat_24">Sat, 24 Oct</string>
+    <string name="hub_date_sun_25">Sun, 25 Oct</string>
+    <string name="hub_date_fri_30">Fri, 30 Oct</string>
+    <string name="hub_date_sat_26">Sat, 26 Oct</string>
+    <string name="hub_date_sun_27">Sun, 27 Oct</string>
+    <string name="hub_date_fri_25">Fri, 25 Oct</string>
+    <string name="hub_time_1042">10:42 AM</string>
+    <string name="hub_time_yesterday">Yesterday</string>
+    <string name="hub_time_mon">Mon</string>
+    <string name="desc_event_image">Event Image</string>
+    <string name="desc_calendar_icon">Calendar Icon</string>
+    <string name="desc_group_icon">Group Icon</string>
+    <string name="hub_event_1_title">Morning Coffee Walk</string>
+    <string name="hub_event_1_desc">Join us for a relaxing morning stroll through the botanical gardens followed by artisanal coffee.</string>
+    <string name="hub_event_1_loc">Central Park Pavilion (Offline)</string>
+    <string name="hub_scholarship_title">Tech Innovators Scholarship 2024</string>
+    <string name="hub_scholarship_org">Organized by Global Tech Foundation</string>
+    <string name="hub_scholarship_deadline">Deadline: 15 Nov 2024</string>
+    <string name="hub_event_2_title">Gallery Mixer</string>
+    <string name="hub_event_2_desc">An evening of networking and appreciating minimalist art installations with local creatives.</string>
+    <string name="hub_event_2_loc">The Modernist Annex (Offline)</string>
+    <string name="hub_program_title">Design Leadership Program</string>
+    <string name="hub_program_org">Organized by Creative Hub Asia</string>
+    <string name="hub_program_deadline">Deadline: 01 Oct 2024</string>
+    <string name="hub_event_3_title">Farm to Table Dinner</string>
+    <string name="hub_event_3_desc">Experience a curated multi-course meal featuring locally sourced ingredients in an open-air setting.</string>
+    <string name="hub_event_3_loc">Virtual Event (Online)</string>
+    <string name="hub_group_photo">Photography Enthusiasts</string>
+    <string name="hub_group_photo_msg">Anyone joining the photowalk tomorrow?</string>
+    <string name="hub_group_coffee">Weekend Coffee Club</string>
+    <string name="hub_group_coffee_msg">New spot opening downtown, let\'s check it out!</string>
+    <string name="hub_group_hiking">Hiking &amp; Nature</string>
+    <string name="hub_group_hiking_msg">Trail conditions were perfect this morning.</string>
     <string name="bib_label_short">BIB</string>
     <string name="points_label">BIB Points</string>
-    <string name="timer_label">Sisa Waktu Nongki</string>
-    <string name="start_nongki">Mulai Nongki Produktif</string>
-    <string name="stop_nongki">Selesai Nongki</string>
-    <string name="task_warning">Awas! Ada tugas mendekati deadline.</string>
-    <string name="penalty_warning">Hati-hati! Penalti menanti jika melewati batas.</string>
-    <string name="see_more">Lihat Selengkapnya</string>
+    <string name="timer_label">Hangout Time Remaining</string>
+    <string name="start_nongki">Start Productive Hangout</string>
+    <string name="stop_nongki">Finish Hangout</string>
+    <string name="task_warning">Watch out! A task is approaching deadline.</string>
+    <string name="penalty_warning">Be careful! Penalty awaits if you exceed the limit.</string>
+    <string name="see_more">See More</string>
 
     <!-- Auth Strings -->
-    <string name="register_title">Buat Akun Nongki Bib</string>
-    <string name="register_subtitle">Bergabung dengan komunitas awardee terbaik</string>
-    <string name="hint_full_name">Nama Lengkap</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="btn_register">Daftar Sekarang</string>
-    <string name="btn_google_register">Daftar dengan Google</string>
-    <string name="forgot_password">Lupa Password?</string>
-    <string name="already_have_account">Sudah punya akun? Masuk</string>
+    <string name="auth_title_login">Welcome\nback</string>
+    <string name="auth_subtitle_login">Please enter your details to sign in.</string>
+    <string name="auth_title_register">Create\nAccount</string>
+    <string name="auth_subtitle_register">Join the BIB community now.</string>
+    <string name="auth_label_full_name">Full Name</string>
+    <string name="auth_hint_full_name">Enter your full name</string>
+    <string name="auth_label_email">Email</string>
+    <string name="auth_hint_email">example@email.com</string>
+    <string name="auth_hint_email_login">Enter your email</string>
+    <string name="auth_label_phone">Phone Number</string>
+    <string name="auth_hint_phone">+62 812 3456 7890</string>
+    <string name="auth_label_password">Password</string>
+    <string name="auth_hint_password">Minimum 8 characters</string>
+    <string name="auth_hint_password_login">Enter your password</string>
+    <string name="auth_label_forgot_password">Forgot Password?</string>
+    <string name="auth_label_remember_me">Remember me for 30 days</string>
+    <string name="auth_btn_register">SIGN UP</string>
+    <string name="auth_btn_login">SIGN IN</string>
+    <string name="auth_label_or">OR</string>
+    <string name="auth_label_or_register">Or register with</string>
+    <string name="auth_btn_google">Sign in with Google</string>
+    <string name="auth_btn_google_signup">Sign up with Google</string>
+    <string name="auth_footer_login">Already have an account? </string>
+    <string name="auth_action_login">Sign in now</string>
+    <string name="auth_footer_register">Don\'t have an account? </string>
+    <string name="auth_action_register">Sign up</string>
+
+    <!-- Account Settings -->
+    <string name="setting_account_title">Phone Number &amp; Email</string>
+    <string name="account_settings_desc">Manage your contact information to keep your account secure and simplify the login process.</string>
+    <string name="label_email">Email Address</string>
+    <string name="label_phone">Phone Number</string>
+    <string name="label_linked_accounts">Linked Accounts</string>
+    <string name="label_linked_accounts_desc">Connect external accounts for quick login.</string>
+    <string name="status_not_verified">Not Verified</string>
+    <string name="status_verified">Verified</string>
+    <string name="btn_send_otp">Send OTP Code</string>
+    <string name="action_change_number">Change Number</string>
+    <string name="action_disconnect">Disconnect</string>
+
+    <!-- Home Dashboard -->
+    <string name="home_welcome_title">Welcome back,\nAwardee!</string>
+    <string name="home_action_scan_qr">Scan QR</string>
+    <string name="home_action_id_card">ID Card</string>
+    <string name="home_action_help">Help</string>
+    <string name="home_timer_desc">Time spent co-working this week.</string>
+    <string name="home_event_brunch">Networking Brunch</string>
+    <string name="home_event_design">Design Thinking</string>
+    <string name="home_event_loc_senopati">Senopati Spot</string>
+    <string name="home_event_loc_virtual">Virtual Hub</string>
+    <string name="home_tag_weekend">This Weekend</string>
+    <string name="home_tag_workshop">Workshop</string>
+    <string name="home_create_event">Create Event</string>
+    <string name="home_create_event_desc">Host a gathering for fellow awardees.</string>
+
+    <string name="welcome_back">Welcome back!</string>
+    <string name="home_progress_desc">You\'re making great progress this month. Keep it up.</string>
+    <string name="btn_view_progress">View Progress</string>
+    <string name="action_scan_qr">Scan QR</string>
+    <string name="action_id_card">ID Card</string>
+    <string name="action_help">Help</string>
+    <string name="timer_desc">Time spent co-working this week.</string>
+
+    <!-- About -->
+    <string name="version_label">Version 1.0.5</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="third_party_licenses">Third Party Licenses</string>
+    <string name="btn_rate_playstore">Rate on Play Store</string>
+    <string name="copyright_text">© 2024 NongkiBib Team</string>
+
+    <!-- Edit Profile Strings -->
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="action_change_photo">Change Profile Photo</string>
+    <string name="label_personal_info">Personal Information</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="hint_full_name">Enter your full name</string>
+    <string name="label_bio">Bio / Short Description</string>
+    <string name="hint_bio">Tell us about yourself</string>
+    <string name="label_dob">Date of Birth</string>
+    <string name="hint_dob">Select your date of birth</string>
+    <string name="label_domicile">Domicile (City)</string>
+    <string name="label_academic_detail">Academic Details</string>
+    <string name="label_campus">Campus Origin</string>
+    <string name="label_faculty">Faculty</string>
+    <string name="label_program_study">Study Program</string>
+    <string name="label_academic_year">Class Year</string>
+    <string name="btn_save_profile">Save Changes</string>
+    <string name="bib_chats">BIB Chats</string>
+
+    <string name="sample_name">Arjuna Pratama</string>
+    <string name="sample_bio">Student interested in sustainable design and green technology. Always looking for collaboration opportunities.</string>
+    <string name="sample_domicile">Bandung, West Java</string>
+    <string name="sample_campus">Bandung Institute of Technology</string>
+    <string name="sample_faculty">Faculty of Art and Design</string>
+    <string name="sample_prodi">Visual Communication Design</string>
+    <string name="sample_year">2022</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_section_account">AKUN &amp; KEAMANAN</string>
+    <string name="settings_item_phone">Nomor Telepon</string>
+    <string name="settings_item_ktm">Verifikasi KTM</string>
+    <string name="settings_status_verified">Terverifikasi</string>
+    <string name="settings_item_security">Keamanan</string>
+    <string name="settings_sub_security">Kata sandi, Autentikasi 2 Faktor</string>
+    <string name="settings_item_privacy">Privasi &amp; Visibilitas</string>
+    <string name="settings_section_communication">KOMUNIKASI</string>
+    <string name="settings_item_notifications">Notifikasi</string>
+    <string name="settings_sub_notifications">Push, Email, SMS</string>
+    <string name="settings_item_chat">Opsi Obrolan</string>
+    <string name="settings_sub_chat">Privasi pesan, Baca tanda</string>
+    <string name="settings_section_preferences">PREFERENSI</string>
+    <string name="settings_item_display">Tampilan</string>
+    <string name="settings_sub_display">Mode Terang</string>
+    <string name="settings_item_language">Bahasa</string>
+    <string name="settings_sub_language">Bahasa Indonesia</string>
+    <string name="settings_section_others">LAINNYA</string>
+    <string name="settings_item_help">Dukungan &amp; Bantuan</string>
+    <string name="settings_item_about">Tentang Aplikasi</string>
+    <string name="settings_btn_logout">Keluar</string>
+
+    <string name="label_messages">Messages</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="hint_search_members">Search members or groups...</string>
+
+    <string name="label_account_settings">Account Settings</string>
+    <string name="desc_account_settings">Manage account settings and security</string>
+    <string name="label_event_history">Event History</string>
+    <string name="desc_event_history">View joined events</string>
+    <string name="label_help_faq">Help &amp; FAQ</string>
+    <string name="desc_help_faq">Find answers to your questions</string>
+
+    <!-- OTP Verification -->
+    <string name="otp_verify_email">Email Verification</string>
+    <string name="otp_instruction">Enter the 6-digit OTP code we have sent to your email address.</string>
+    <string name="btn_verify">Verify</string>
+    <string name="resend_timer">Resend in %1$s</string>
 </resources>

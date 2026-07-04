@@ -20,7 +20,6 @@ class RegisterFragment : Fragment() {
 
         val btnRegister = view.findViewById<Button>(R.id.btn_register)
         val btnGoogle = view.findViewById<Button>(R.id.btn_google)
-        val tvForgotPassword = view.findViewById<TextView>(R.id.tv_forgot_password)
         val tvLogin = view.findViewById<TextView>(R.id.tv_login)
 
         btnRegister.setOnClickListener {
@@ -31,10 +30,6 @@ class RegisterFragment : Fragment() {
 
         btnGoogle.setOnClickListener {
             Toast.makeText(context, "Simulasi Google Sign-In", Toast.LENGTH_SHORT).show()
-        }
-
-        tvForgotPassword.setOnClickListener {
-            Toast.makeText(context, "Fitur Reset Password", Toast.LENGTH_SHORT).show()
         }
 
         tvLogin.setOnClickListener {

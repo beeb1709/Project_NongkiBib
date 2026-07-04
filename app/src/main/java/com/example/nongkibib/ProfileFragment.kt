@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.RelativeLayout
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
@@ -18,14 +17,17 @@ class ProfileFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-        val menuEditProfile = view.findViewById<RelativeLayout>(R.id.menu_edit_profile)
-        val btnLogout = view.findViewById<Button>(R.id.btn_logout)
+        val menuSettings = view.findViewById<View>(R.id.menu_settings)
+        val btnNotifications = view.findViewById<ImageView>(R.id.btn_notifications)
+        val btnLogout = view.findViewById<View>(R.id.btn_logout)
 
-        menuEditProfile.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, EditProfileFragment())
-                .addToBackStack(null)
-                .commit()
+        menuSettings.setOnClickListener {
+            val intent = Intent(requireContext(), SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnNotifications.setOnClickListener {
+            Toast.makeText(requireContext(), "Notifikasi", Toast.LENGTH_SHORT).show()
         }
 
         btnLogout.setOnClickListener {

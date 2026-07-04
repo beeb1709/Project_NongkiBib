@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
 import java.util.*
 
@@ -22,9 +22,9 @@ class EditProfileFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_edit_profile, container, false)
 
         val btnBack = view.findViewById<ImageView>(R.id.btn_back)
-        val btnSave = view.findViewById<TextView>(R.id.btn_save)
+        val btnSave = view.findViewById<MaterialButton>(R.id.btn_save)
         val etDob = view.findViewById<TextInputEditText>(R.id.et_dob)
-        val btnEditPhoto = view.findViewById<FloatingActionButton>(R.id.btn_edit_photo)
+        val btnEditPhoto = view.findViewById<MaterialCardView>(R.id.btn_edit_photo)
 
         btnBack.setOnClickListener {
             parentFragmentManager.popBackStack()
