@@ -23,45 +23,41 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MainPagerAdapter(this)
         viewPager.adapter = adapter
+        
+        // Optimasi: Membatasi fragment yang dimuat di memori untuk kelancaran swipe
+        viewPager.offscreenPageLimit = 2
 
         // Sinkronisasi ViewPager swipe ke BottomNav
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                when (position) {
-                    0 -> navView.selectedItemId = R.id.nav_home
-                    1 -> navView.selectedItemId = R.id.nav_map
-                    2 -> navView.selectedItemId = R.id.nav_acara
-                    3 -> navView.selectedItemId = R.id.nav_inbox
-                    4 -> navView.selectedItemId = R.id.nav_profile
+                val menuId = when (position) {
+                    0 -> R.id.nav_home
+                    1 -> R.id.nav_acara
+                    2 -> R.id.nav_map
+                    3 -> R.id.nav_inbox
+                    4 -> R.id.nav_profile
+                    else -> R.id.nav_home
+                }
+                if (navView.selectedItemId != menuId) {
+                    navView.selectedItemId = menuId
                 }
             }
         })
 
         // Sinkronisasi BottomNav click ke ViewPager
         navView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    viewPager.currentItem = 0
-                    true
-                }
-                R.id.nav_map -> {
-                    viewPager.currentItem = 1
-                    true
-                }
-                R.id.nav_acara -> {
-                    viewPager.currentItem = 2
-                    true
-                }
-                R.id.nav_inbox -> {
-                    viewPager.currentItem = 3
-                    true
-                }
-                R.id.nav_profile -> {
-                    viewPager.currentItem = 4
-                    true
-                }
-                else -> false
+            val position = when (item.itemId) {
+                R.id.nav_home -> 0
+                R.id.nav_acara -> 1
+                R.id.nav_map -> 2
+                R.id.nav_inbox -> 3
+                R.id.nav_profile -> 4
+                else -> 0
             }
+            if (viewPager.currentItem != position) {
+                viewPager.setCurrentItem(position, true) // Smooth scroll
+            }
+            true
         }
     }
 

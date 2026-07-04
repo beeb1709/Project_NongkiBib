@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Standard Semantic Color Scheme (Request) -->
+    <color name="md_theme_surface">#FBF9F9</color>
+    <color name="md_theme_surface_container">#FFFFFF</color>
+    <color name="md_theme_surface_dim">#DBDAD9</color>
+
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
 
-    <!-- NongkiBib Colors based on Logo -->
-    <color name="primary">#7B5A3E</color> <!-- Coklat Tua -->
-    <color name="primary_dark">#5D432D</color> <!-- Coklat Lebih Tua -->
-    <color name="accent">#D4AF37</color> <!-- Emas -->
-    <color name="bg_light">#FDFBF7</color> <!-- Krem  -->
-    <color name="text_dark">#2C2219</color> <!-- Hampir Hitam Coklat -->
-    <color name="text_grey">#8D7B6D</color> <!-- Coklat Abu-abu -->
+    <!-- Earthy Minimalist Palette (Updated from Image) -->
+    <color name="primary">#3E2723</color>
+    <color name="on_primary">#ffffff</color>
+    <color name="primary_container">#5D4037</color>
+    <color name="on_primary_container">#D7CCC8</color>
 
-    <!-- Additional Colors -->
-    <color name="tab_active">#114C5F</color>
-    <color name="tab_inactive">#DDDDDD</color>
-    <color name="grey_light">#EEEEEE</color>
-    <color name="divider">#EEEEEE</color>
+    <color name="secondary">#8A9A5B</color>
+    <color name="on_secondary">#ffffff</color>
+    <color name="secondary_container">#C5E1A5</color>
+    <color name="on_secondary_container">#33691E</color>
+    <color name="secondary_fixed">#D9EAA3</color>
 
-    <color name="teal_dark">#114C5F</color>
-    <color name="teal_accent">#2AB3B6</color>
-    <color name="warning_orange">#E65100</color>
-    <color name="warning_bg">#FFF3E0</color>
-    <color name="brown_card">#4D3B2A</color>
-    <color name="blue_card">#1E3A46</color>
-    <color name="orange_accent">#F58220</color>
+    <color name="tertiary">#C5B358</color>
+    <color name="on_tertiary">#ffffff</color>
+    <color name="tertiary_container">#F0E68C</color>
+    <color name="tertiary_fixed">#F7E382</color>
+
+    <color name="neutral">#757575</color>
+    <color name="outline">#827472</color>
+    <color name="outline_variant">#DBDAD9</color>
+
+    <!-- Background & Surface -->
+    <color name="bg_auth">#FBF9F9</color>
+    <color name="bg_light">#FBF9F9</color>
+    <color name="surface">#FBF9F9</color>
+    <color name="surface_variant">#DBDAD9</color>
+    <color name="surface_container_lowest">#FFFFFF</color>
+    <color name="surface_container_low">#F5F3F3</color>
+    <color name="surface_container">#FFFFFF</color>
+    <color name="surface_container_high">#E9E8E7</color>
+    <color name="surface_container_highest">#E3E2E2</color>
+
+    <color name="text_dark">#1B1C1C</color>
+    <color name="text_grey">#757575</color>
+    <color name="on_surface_variant">#504442</color>
+
+    <color name="error">#BA1A1A</color>
+    <color name="on_error">#ffffff</color>
+    <color name="error_container">#FFDAD6</color>
+    <color name="on_error_container">#93000A</color>
+
+    <!-- Legacy / Compatibility -->
+    <color name="accent">#C5B358</color>
+    <color name="divider">#DBDAD9</color>
+    <color name="grey_light">#EFEDED</color>
     <color name="white_translucent">#B0FFFFFF</color>
 </resources>

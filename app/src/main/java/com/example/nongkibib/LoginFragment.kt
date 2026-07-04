@@ -19,7 +19,7 @@ class LoginFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         val btnLogin = view.findViewById<Button>(R.id.btn_login)
-        val btnGoogleLogin = view.findViewById<Button>(R.id.btn_google_login)
+        val btnGoogleLogin = view.findViewById<Button>(R.id.btn_google)
         val tvForgotPassword = view.findViewById<TextView>(R.id.tv_forgot_password)
         val tvRegister = view.findViewById<TextView>(R.id.tv_register)
 

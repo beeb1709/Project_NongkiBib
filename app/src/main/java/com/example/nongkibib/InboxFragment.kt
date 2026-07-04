@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
@@ -22,11 +21,10 @@ class InboxFragment : Fragment() {
         val profileHeader = view.findViewById<CardView>(R.id.cv_profile_header)
         val ivProfile = view.findViewById<ImageView>(R.id.iv_profile_header)
         val tvName = view.findViewById<TextView>(R.id.tv_profile_name_header)
-        val btnBack = view.findViewById<ImageView>(R.id.btn_back)
 
         // Integrasi data user
         ivProfile.setImageResource(R.drawable.profile_habibie)
-        tvName.text = "Habibie"
+        tvName.text = "BIB Chats"
 
         profileHeader.setOnClickListener {
             val activity = activity as? MainActivity
@@ -34,14 +32,8 @@ class InboxFragment : Fragment() {
             navView?.selectedItemId = R.id.nav_profile
         }
 
-        btnBack.setOnClickListener {
-            val activity = activity as? MainActivity
-            val navView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-            navView?.selectedItemId = R.id.nav_home
-        }
-
-        val chat1 = view.findViewById<RelativeLayout>(R.id.chat_item_1)
-        val chat2 = view.findViewById<RelativeLayout>(R.id.chat_item_2)
+        val chat1 = view.findViewById<View>(R.id.chat_item_1)
+        val chat2 = view.findViewById<View>(R.id.chat_item_2)
 
         chat1.setOnClickListener { openChat("Zhou Koo Wii - BIB 2024") }
         chat2.setOnClickListener { openChat("Prabowo (Ketua Angkatan)") }

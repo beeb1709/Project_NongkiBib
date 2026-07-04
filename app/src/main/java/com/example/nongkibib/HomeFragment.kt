@@ -22,9 +22,9 @@ class HomeFragment : Fragment() {
         val ivProfile = view.findViewById<ImageView>(R.id.iv_profile_header)
         val tvName = view.findViewById<TextView>(R.id.tv_profile_name_header)
 
-        // Integrasi data user (Contoh hardcoded sesuai profile yang ada)
-        ivProfile.setImageResource(R.drawable.profile_habibie)
-        tvName.text = "Habibie"
+        // Integrasi data user
+        ivProfile.setImageResource(R.drawable.jokowi)
+        tvName.text = "BIB Community"
 
         profileHeader.setOnClickListener {
             // Navigasi ke fragment profil
