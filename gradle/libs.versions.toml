@@ -9,6 +9,13 @@ material = "1.13.0"
 activity = "1.13.0"
 constraintlayout = "2.2.1"
 generativeai = "0.9.0"
+google-maps = "20.0.0"
+google-location = "21.4.0"
+google-auth = "21.6.0"
+retrofit = "3.0.0"
+okhttp = "5.4.0"
+okhttp-urlconnection = "5.4.0"
+gson = "2.14.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,6 +27,14 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 google-ai-client = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "generativeai" }
+google-play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "google-maps" }
+google-play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "google-location" }
+google-play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "google-auth" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-urlconnection = { group = "com.squareup.okhttp3", name = "okhttp-urlconnection", version.ref = "okhttp-urlconnection" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

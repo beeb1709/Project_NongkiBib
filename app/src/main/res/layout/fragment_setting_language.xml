@@ -44,8 +44,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,26 +60,29 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="@color/surface_container_low"
-                android:layout_marginBottom="24dp">
+                app:cardBackgroundColor="@color/md_theme_surface_container"
+                android:layout_marginBottom="24dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/md_theme_surface_dim">
                 <EditText
+                    android:id="@+id/et_search_lang"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/ic_search_custom"
                     android:drawablePadding="12dp"
-                    android:hint="Cari bahasa..."
+                    android:hint="Search language..."
                     android:paddingHorizontal="16dp"
                     android:textSize="14sp"
                     android:textColorHint="@color/outline"
                     android:inputType="text" />
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Section 1: Sering Digunakan -->
+            <!-- Section 1: FREQUENTLY USED -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SERING DIGUNAKAN"
+                android:text="FREQUENTLY USED"
                 android:textColor="@color/outline"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -93,45 +95,52 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_marginBottom="24dp">
+                app:cardBackgroundColor="@color/md_theme_surface_container"
+                android:layout_marginBottom="24dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/md_theme_surface_dim">
                 <RadioGroup
+                    android:id="@+id/rg_lang_frequent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <!-- Indo -->
+                    <!-- English -->
                     <RelativeLayout
+                        android:id="@+id/item_lang_en"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="16dp">
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
                         <ImageView
-                            android:id="@+id/ic_globe_1"
+                            android:id="@+id/ic_globe_en"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_globe"
-                            app:tint="@color/text_grey"
+                            app:tint="@color/primary"
                             android:layout_centerVertical="true" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_toEndOf="@id/ic_globe_1"
+                            android:layout_toEndOf="@id/ic_globe_en"
                             android:layout_marginStart="16dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bahasa Indonesia"
-                                android:textColor="@color/text_dark"
+                                android:text="English"
+                                android:textColor="@color/primary"
                                 android:textStyle="bold"
                                 android:textSize="15sp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Indonesia"
-                                android:textColor="@color/text_grey"
+                                android:text="United States"
+                                android:textColor="@color/on_surface_variant"
                                 android:textSize="12sp" />
                         </LinearLayout>
-                        <RadioButton
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_lang_en"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -139,41 +148,45 @@
                             android:checked="true" />
                     </RelativeLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_theme_surface_dim" android:layout_marginStart="56dp" />
 
-                    <!-- English -->
+                    <!-- Indonesian -->
                     <RelativeLayout
+                        android:id="@+id/item_lang_id"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="16dp">
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
                         <ImageView
-                            android:id="@+id/ic_globe_2"
+                            android:id="@+id/ic_globe_id"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_globe"
-                            app:tint="@color/text_grey"
+                            app:tint="@color/primary"
                             android:layout_centerVertical="true" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_toEndOf="@id/ic_globe_2"
+                            android:layout_toEndOf="@id/ic_globe_id"
                             android:layout_marginStart="16dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="English"
-                                android:textColor="@color/text_dark"
+                                android:text="Bahasa Indonesia"
+                                android:textColor="@color/primary"
                                 android:textStyle="bold"
                                 android:textSize="15sp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Inggris"
-                                android:textColor="@color/text_grey"
+                                android:text="Indonesia"
+                                android:textColor="@color/on_surface_variant"
                                 android:textSize="12sp" />
                         </LinearLayout>
-                        <RadioButton
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_lang_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -182,11 +195,11 @@
                 </RadioGroup>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Section 2: Semua Bahasa -->
+            <!-- Section 2: ALL LANGUAGES -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SEMUA BAHASA"
+                android:text="ALL LANGUAGES"
                 android:textColor="@color/outline"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -199,95 +212,42 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_marginBottom="24dp">
-                <RadioGroup
+                app:cardBackgroundColor="@color/md_theme_surface_container"
+                android:layout_marginBottom="24dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/md_theme_surface_dim">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <!-- French -->
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g3" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
+                        <ImageView android:id="@+id/ic_g3" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/primary" android:layout_centerVertical="true" />
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g3" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Français" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prancis" android:textColor="@color/text_grey" android:textSize="12sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Français" android:textColor="@color/primary" android:textStyle="bold" android:textSize="15sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="French" android:textColor="@color/on_surface_variant" android:textSize="12sp" />
                         </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
                     </RelativeLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/md_theme_surface_dim" android:layout_marginStart="56dp" />
 
                     <!-- German -->
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g4" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
+                        <ImageView android:id="@+id/ic_g4" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/primary" android:layout_centerVertical="true" />
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g4" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deutsch" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jerman" android:textColor="@color/text_grey" android:textSize="12sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deutsch" android:textColor="@color/primary" android:textStyle="bold" android:textSize="15sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="German" android:textColor="@color/on_surface_variant" android:textSize="12sp" />
                         </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
+                        <com.google.android.material.radiobutton.MaterialRadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
                     </RelativeLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
-
-                    <!-- Spanish -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g5" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g5" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Español" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spanyol" android:textColor="@color/text_grey" android:textSize="12sp" />
-                        </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
-                    </RelativeLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
-
-                    <!-- Chinese -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g6" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g6" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="简体中文 (Mandarin)" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mandarin (Sederhana)" android:textColor="@color/text_grey" android:textSize="12sp" />
-                        </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
-                    </RelativeLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
-
-                    <!-- Japanese -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g7" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g7" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日本語" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jepang" android:textColor="@color/text_grey" android:textSize="12sp" />
-                        </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
-                    </RelativeLayout>
-                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/surface_container" android:layout_marginStart="56dp" />
-
-                    <!-- Korean -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp">
-                        <ImageView android:id="@+id/ic_g8" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_globe" app:tint="@color/text_grey" android:layout_centerVertical="true" />
-                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toEndOf="@id/ic_g8" android:layout_marginStart="16dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="한국어" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="15sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Korea" android:textColor="@color/text_grey" android:textSize="12sp" />
-                        </LinearLayout>
-                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" />
-                    </RelativeLayout>
-                </RadioGroup>
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
@@ -300,15 +260,15 @@
         android:layout_gravity="bottom"
         app:cardElevation="8dp"
         app:cardCornerRadius="0dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/md_theme_surface_container">
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_save"
+            android:id="@+id/btn_save_language"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_margin="20dp"
-            android:text="Simpan Perubahan"
+            android:text="Save Changes"
             android:backgroundTint="@color/primary"
-            android:textColor="@color/on_primary"
+            android:textColor="@color/white"
             app:cornerRadius="16dp"
             android:textAllCaps="false"
             android:textStyle="bold"

@@ -5,14 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nongkibib.model.MessageItem
 
-data class ChatMessage(
-    val text: String,
-    val timestamp: String,
-    val isMe: Boolean
-)
-
-class ChatAdapter(private val messages: List<ChatMessage>) :
+class MessageAdapter(private val messages: List<MessageItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val VIEW_TYPE_ME = 1
@@ -43,21 +38,21 @@ class ChatAdapter(private val messages: List<ChatMessage>) :
 
     override fun getItemCount(): Int = messages.size
 
-    class SentMessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class SentMessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvMessage: TextView = itemView.findViewById(R.id.tv_message_right)
         private val tvTime: TextView = itemView.findViewById(R.id.tv_time_right)
 
-        fun bind(message: ChatMessage) {
+        fun bind(message: MessageItem) {
             tvMessage.text = message.text
             tvTime.text = message.timestamp
         }
     }
 
-    class ReceivedMessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ReceivedMessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvMessage: TextView = itemView.findViewById(R.id.tv_message_left)
         private val tvTime: TextView = itemView.findViewById(R.id.tv_time_left)
 
-        fun bind(message: ChatMessage) {
+        fun bind(message: MessageItem) {
             tvMessage.text = message.text
             tvTime.text = message.timestamp
         }

@@ -200,8 +200,27 @@ class KtmSettingFragment : Fragment(R.layout.fragment_setting_ktm) {
 
 class SecuritySettingFragment : Fragment(R.layout.fragment_setting_security)
 class PrivacySettingFragment : Fragment(R.layout.fragment_setting_privacy)
-class NotificationSettingFragment : Fragment(R.layout.fragment_setting_notifications)
-class ChatSettingFragment : Fragment(R.layout.fragment_setting_chat)
+class HelpSettingFragment : Fragment(R.layout.fragment_setting_help)
+class AboutSettingFragment : Fragment(R.layout.fragment_setting_about)
+
+class NotificationSettingFragment : Fragment(R.layout.fragment_setting_notifications) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Since Notification page according to image doesn't have Save button in layout
+        // But if you want to add one, we can. For now, let's just make it functional.
+    }
+}
+
+class ChatSettingFragment : Fragment(R.layout.fragment_setting_chat) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.btn_save_chat)?.setOnClickListener {
+            Toast.makeText(requireContext(), "Chat settings saved!", Toast.LENGTH_SHORT).show()
+            requireActivity().onBackPressed()
+        }
+    }
+}
+
 class DisplaySettingFragment : Fragment(R.layout.fragment_setting_display) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -216,23 +235,30 @@ class DisplaySettingFragment : Fragment(R.layout.fragment_setting_display) {
             radioButtons.forEach { it.isChecked = it.id == selectedId }
         }
 
-        // Set click listeners for the RadioButtons themselves
         rbLight.setOnClickListener { selectOption(R.id.rb_light) }
         rbDark.setOnClickListener { selectOption(R.id.rb_dark) }
         rbSystem.setOnClickListener { selectOption(R.id.rb_system) }
 
-        // Also make the whole row clickable for better UX
-        view.findViewById<View>(R.id.icon_light_container).parent.let { parent ->
-            (parent as View).setOnClickListener { selectOption(R.id.rb_light) }
-        }
-        view.findViewById<View>(R.id.icon_dark_container).parent.let { parent ->
-            (parent as View).setOnClickListener { selectOption(R.id.rb_dark) }
-        }
-        view.findViewById<View>(R.id.icon_system_container).parent.let { parent ->
-            (parent as View).setOnClickListener { selectOption(R.id.rb_system) }
+        // Row clicks
+        view.findViewById<View>(R.id.icon_light_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_light) } }
+        view.findViewById<View>(R.id.icon_dark_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_dark) } }
+        view.findViewById<View>(R.id.icon_system_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_system) } }
+
+        view.findViewById<Button>(R.id.btn_save_display)?.setOnClickListener {
+            Toast.makeText(requireContext(), "Display settings saved!", Toast.LENGTH_SHORT).show()
+            requireActivity().onBackPressed()
         }
     }
 }
-class LanguageSettingFragment : Fragment(R.layout.fragment_setting_language)
-class HelpSettingFragment : Fragment(R.layout.fragment_setting_help)
-class AboutSettingFragment : Fragment(R.layout.fragment_setting_about)
+
+class LanguageSettingFragment : Fragment(R.layout.fragment_setting_language) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.btn_save_language)?.setOnClickListener {
+            Toast.makeText(requireContext(), "Language saved!", Toast.LENGTH_SHORT).show()
+            requireActivity().onBackPressed()
+        }
+    }
+}
+
+
