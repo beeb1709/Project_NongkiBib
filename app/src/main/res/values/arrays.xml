@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="indonesia_cities">
+        <item>Jakarta</item>
+        <item>Bandung</item>
+        <item>Surabaya</item>
+        <item>Yogyakarta</item>
+        <item>Semarang</item>
+        <item>Medan</item>
+        <item>Makassar</item>
+        <item>Palembang</item>
+        <item>Denpasar</item>
+        <item>Malang</item>
+    </string-array>
+
+    <string-array name="indonesia_universities">
+        <item>Universitas Indonesia (UI)</item>
+        <item>Institut Teknologi Bandung (ITB)</item>
+        <item>Universitas Gadjah Mada (UGM)</item>
+        <item>Institut Pertanian Bogor (IPB)</item>
+        <item>Universitas Airlangga (UNAIR)</item>
+        <item>Universitas Padjadjaran (UNPAD)</item>
+        <item>Institut Teknologi Sepuluh Nopember (ITS)</item>
+        <item>Universitas Diponegoro (UNDIP)</item>
+        <item>Universitas Brawijaya (UB)</item>
+        <item>Universitas Hasanuddin (UNHAS)</item>
+    </string-array>
+
+    <string-array name="faculties">
+        <item>Faculty of Engineering</item>
+        <item>Faculty of Economics and Business</item>
+        <item>Faculty of Medicine</item>
+        <item>Faculty of Law</item>
+        <item>Faculty of Social and Political Sciences</item>
+        <item>Faculty of Humanities</item>
+        <item>Faculty of Mathematics and Natural Sciences</item>
+        <item>Faculty of Computer Science</item>
+        <item>Faculty of Psychology</item>
+        <item>Faculty of Art and Design</item>
+    </string-array>
+
+    <string-array name="study_programs">
+        <item>Informatics / Computer Science</item>
+        <item>Visual Communication Design</item>
+        <item>Management</item>
+        <item>Accounting</item>
+        <item>Civil Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Architecture</item>
+        <item>Communication Sciences</item>
+        <item>International Relations</item>
+        <item>Medicine</item>
+    </string-array>
+
+    <string-array name="class_years">
+        <item>2025</item>
+        <item>2024</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>Alumni</item>
+    </string-array>
+</resources>

@@ -18,7 +18,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/nongkibib2_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NongkiBib">
+        android:theme="@style/Theme.NongkiBib"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -31,14 +32,32 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".AuthActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
             android:name=".SettingsDetailActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ScholarshipDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EventDetailActivity"
+            android:exported="false" />
+
+        <!-- Masukkan API Key Google Maps Anda di bawah ini -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD87rW3oGVf3PaWBy0r9g_nc3RoZntjLyc" />
     </application>
 
 </manifest>

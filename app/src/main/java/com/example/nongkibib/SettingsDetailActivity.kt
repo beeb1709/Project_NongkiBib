@@ -4,21 +4,15 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.telephony.SmsManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import java.util.Locale
-import kotlin.random.Random
 
 class SettingsDetailActivity : AppCompatActivity() {
 
@@ -56,14 +50,10 @@ class SettingsDetailActivity : AppCompatActivity() {
 }
 
 class AccountSettingFragment : Fragment(R.layout.fragment_setting_account) {
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val btnSendOtp = view.findViewById<Button>(R.id.btn_send_otp)
-        
         btnSendOtp?.setOnClickListener {
-            // Navigate to OTP Verification Layout
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, OtpVerificationFragment())
                 .addToBackStack(null)
@@ -73,26 +63,18 @@ class AccountSettingFragment : Fragment(R.layout.fragment_setting_account) {
 }
 
 class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
-
     private lateinit var tvTimer: TextView
     private lateinit var btnVerify: Button
     private var countDownTimer: CountDownTimer? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         tvTimer = view.findViewById(R.id.tv_resend_timer)
         btnVerify = view.findViewById(R.id.btn_verify)
-        val btnBack = view.findViewById<ImageView>(R.id.btn_back)
-
-        btnBack.setOnClickListener { parentFragmentManager.popBackStack() }
-
+        view.findViewById<ImageView>(R.id.btn_back).setOnClickListener { parentFragmentManager.popBackStack() }
         setupOtpInputs(view)
         startResendTimer()
-
-        btnVerify.setOnClickListener {
-            verifyOtp()
-        }
+        btnVerify.setOnClickListener { verifyOtp() }
     }
 
     private fun setupOtpInputs(view: View) {
@@ -104,19 +86,14 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
             view.findViewById<EditText>(R.id.otp_box_5),
             view.findViewById<EditText>(R.id.otp_box_6)
         )
-
         for (i in boxes.indices) {
             boxes[i].addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                    if (s?.length == 1 && i < boxes.size - 1) {
-                        boxes[i + 1].requestFocus()
-                    }
+                    if (s?.length == 1 && i < boxes.size - 1) boxes[i + 1].requestFocus()
                 }
                 override fun afterTextChanged(s: Editable?) {
-                    if (s?.length == 0 && i > 0) {
-                        boxes[i - 1].requestFocus()
-                    }
+                    if (s?.length == 0 && i > 0) boxes[i - 1].requestFocus()
                 }
             })
         }
@@ -126,27 +103,18 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
         countDownTimer?.cancel()
         countDownTimer = object : CountDownTimer(60000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                val seconds = millisUntilFinished / 1000
-                tvTimer.text = String.format(Locale.getDefault(), "Resend in 00:%02d", seconds)
+                tvTimer.text = String.format(Locale.getDefault(), "Resend in 00:%02d", millisUntilFinished / 1000)
             }
-
             override fun onFinish() {
                 tvTimer.text = "Resend Code"
-                tvTimer.setTextColor(ContextCompat.getColor(requireContext(), R.color.primary))
-                tvTimer.setOnClickListener {
-                    // Logic to resend OTP
-                    startResendTimer()
-                }
+                tvTimer.setOnClickListener { startResendTimer() }
             }
         }.start()
     }
 
     private fun verifyOtp() {
-        // Logic to verify OTP with loading state
         btnVerify.isEnabled = false
         btnVerify.text = "Verifying..."
-        
-        // Simulating network call
         view?.postDelayed({
             Toast.makeText(requireContext(), "Verification Successful!", Toast.LENGTH_SHORT).show()
             parentFragmentManager.popBackStack()
@@ -160,56 +128,23 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
 }
 
 class KtmSettingFragment : Fragment(R.layout.fragment_setting_ktm) {
-    
-    private val requestCameraPermissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted: Boolean ->
-        if (isGranted) {
-            openCamera()
-        } else {
-            Toast.makeText(requireContext(), "Camera permission denied", Toast.LENGTH_SHORT).show()
-        }
+    private val requestCameraPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+        if (isGranted) openCamera() else Toast.makeText(requireContext(), "Camera permission denied", Toast.LENGTH_SHORT).show()
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
-        view.findViewById<Button>(R.id.btn_take_selfie)?.setOnClickListener {
-            checkCameraPermission()
-        }
+        view.findViewById<Button>(R.id.btn_take_selfie)?.setOnClickListener { checkCameraPermission() }
     }
-
     private fun checkCameraPermission() {
-        when {
-            ContextCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.CAMERA
-            ) == PackageManager.PERMISSION_GRANTED -> {
-                openCamera()
-            }
-            else -> {
-                requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
-            }
-        }
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) openCamera()
+        else requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
     }
-
-    private fun openCamera() {
-        Toast.makeText(requireContext(), "Opening Camera for Verification...", Toast.LENGTH_SHORT).show()
-    }
+    private fun openCamera() { Toast.makeText(requireContext(), "Opening Camera...", Toast.LENGTH_SHORT).show() }
 }
 
 class SecuritySettingFragment : Fragment(R.layout.fragment_setting_security)
 class PrivacySettingFragment : Fragment(R.layout.fragment_setting_privacy)
-class HelpSettingFragment : Fragment(R.layout.fragment_setting_help)
-class AboutSettingFragment : Fragment(R.layout.fragment_setting_about)
-
-class NotificationSettingFragment : Fragment(R.layout.fragment_setting_notifications) {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        // Since Notification page according to image doesn't have Save button in layout
-        // But if you want to add one, we can. For now, let's just make it functional.
-    }
-}
+class NotificationSettingFragment : Fragment(R.layout.fragment_setting_notifications)
 
 class ChatSettingFragment : Fragment(R.layout.fragment_setting_chat) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -224,26 +159,17 @@ class ChatSettingFragment : Fragment(R.layout.fragment_setting_chat) {
 class DisplaySettingFragment : Fragment(R.layout.fragment_setting_display) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val rbLight = view.findViewById<com.google.android.material.radiobutton.MaterialRadioButton>(R.id.rb_light)
         val rbDark = view.findViewById<com.google.android.material.radiobutton.MaterialRadioButton>(R.id.rb_dark)
         val rbSystem = view.findViewById<com.google.android.material.radiobutton.MaterialRadioButton>(R.id.rb_system)
-
         val radioButtons = listOf(rbLight, rbDark, rbSystem)
-
-        fun selectOption(selectedId: Int) {
-            radioButtons.forEach { it.isChecked = it.id == selectedId }
-        }
-
+        fun selectOption(selectedId: Int) { radioButtons.forEach { it.isChecked = it.id == selectedId } }
         rbLight.setOnClickListener { selectOption(R.id.rb_light) }
         rbDark.setOnClickListener { selectOption(R.id.rb_dark) }
         rbSystem.setOnClickListener { selectOption(R.id.rb_system) }
-
-        // Row clicks
         view.findViewById<View>(R.id.icon_light_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_light) } }
         view.findViewById<View>(R.id.icon_dark_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_dark) } }
         view.findViewById<View>(R.id.icon_system_container).parent.let { (it as View).setOnClickListener { selectOption(R.id.rb_system) } }
-
         view.findViewById<Button>(R.id.btn_save_display)?.setOnClickListener {
             Toast.makeText(requireContext(), "Display settings saved!", Toast.LENGTH_SHORT).show()
             requireActivity().onBackPressed()
@@ -261,4 +187,5 @@ class LanguageSettingFragment : Fragment(R.layout.fragment_setting_language) {
     }
 }
 
-
+class HelpSettingFragment : Fragment(R.layout.fragment_setting_help)
+class AboutSettingFragment : Fragment(R.layout.fragment_setting_about)

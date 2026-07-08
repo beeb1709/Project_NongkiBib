@@ -12,4 +12,17 @@
 /captures
 .externalNativeBuild
 .cxx
+
+# Project specific
 local.properties
+google-services.json
+
+# Backend - Node.js
+backend-nongkibib/node_modules/
+backend-nongkibib/dist/
+backend-nongkibib/.env
+backend-nongkibib/data_store.json
+backend-nongkibib/*.log
+
+# Build files
+/*/build/
