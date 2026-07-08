@@ -73,7 +73,7 @@
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_down"
+            android:src="@drawable/ic_chevron_down"
             app:tint="@color/text_grey"
             android:contentDescription="Options" />
     </RelativeLayout>
