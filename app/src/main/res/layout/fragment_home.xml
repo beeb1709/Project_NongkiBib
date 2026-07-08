@@ -407,15 +407,21 @@
             </RelativeLayout>
 
             <!-- Event 1 (Networking Brunch) -->
-            <include layout="@layout/item_event" />
+            <include
+                android:id="@+id/card_event_1"
+                layout="@layout/item_event" />
 
             <!-- Event 2 (Design Thinking) -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_event_2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="0dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">

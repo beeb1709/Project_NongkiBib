@@ -12,8 +12,20 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, AuthActivity::class.java))
-            finish()
+            checkLoginStatus()
         }, 2000)
+    }
+
+    private fun checkLoginStatus() {
+        val sessionManager = SessionManager(this)
+        
+        // Persistent Login Check:
+        // If user exists and token exists, skip login and go to MainActivity
+        if (sessionManager.getUser() != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            startActivity(Intent(this, AuthActivity::class.java))
+        }
+        finish()
     }
 }

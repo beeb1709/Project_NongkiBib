@@ -95,16 +95,18 @@
                         android:layout_marginStart="16dp"
                         android:layout_centerVertical="true">
                         <TextView
+                            android:id="@+id/tv_profile_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aria S."
+                            android:text="User Name"
                             android:textColor="@color/primary"
                             android:textStyle="bold"
                             android:textSize="22sp" />
                         <TextView
+                            android:id="@+id/tv_profile_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="aria@bibcommunity.com"
+                            android:text="user@email.com"
                             android:textColor="@color/on_surface_variant"
                             android:textSize="14sp" />
                     </LinearLayout>

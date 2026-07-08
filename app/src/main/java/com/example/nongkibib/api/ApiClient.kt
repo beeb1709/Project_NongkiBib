@@ -9,8 +9,9 @@ import java.net.CookiePolicy
 import java.util.concurrent.TimeUnit
 
 object ApiClient {
-    // Ganti dengan alamat IP server backend Anda (misalnya http://10.0.2.2:3000 untuk Android Emulator)
-    private const val BASE_URL = "http://10.0.2.2:3000/"
+    // Jika menggunakan ngrok atau Cloud, ganti alamat di bawah ini dengan URL Public Anda
+    // Contoh: "https://nongkibib-backend.railway.app/"
+    private const val BASE_URL = "http://192.168.200.175:3000/"
 
     private var retrofit: Retrofit? = null
 

@@ -22,9 +22,13 @@ class InboxFragment : Fragment() {
         val ivProfile = view.findViewById<ImageView>(R.id.iv_profile_header)
         val tvName = view.findViewById<TextView>(R.id.tv_profile_name_header)
 
-        // Integrasi data user
-        ivProfile.setImageResource(R.drawable.profile_habibie)
+        // Header tetap sebagai judul fitur
         tvName.text = "BIB Chats"
+
+        val user = SessionManager(requireContext()).getUser()
+        if (user != null) {
+            // Update foto profil di header
+        }
 
         profileHeader.setOnClickListener {
             val activity = activity as? MainActivity

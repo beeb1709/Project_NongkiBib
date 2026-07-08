@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         // Sinkronisasi ViewPager swipe ke BottomNav
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
+                // Disable swipe input when on Map page (index 2) to prevent conflicts with map dragging
+                viewPager.isUserInputEnabled = position != 2
+
                 val menuId = when (position) {
                     0 -> R.id.nav_home
                     1 -> R.id.nav_acara
@@ -59,6 +62,16 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        checkUserSession()
+    }
+
+    private fun checkUserSession() {
+        val user = SessionManager(this).getUser()
+        if (user == null) {
+            startActivity(Intent(this, AuthActivity::class.java))
+            finish()
+        }
     }
 
     override fun onStart() {
@@ -79,7 +92,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        unregisterReceiver(receiver)
+        if (::receiver.isInitialized) {
+            unregisterReceiver(receiver)
+        }
     }
 
     fun setBottomNavigationVisibility(isVisible: Boolean) {

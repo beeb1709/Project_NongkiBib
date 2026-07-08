@@ -64,14 +64,11 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- Map Area -->
-        <ImageView
+        <!-- Map Area Container -->
+        <FrameLayout
+            android:id="@+id/map_view_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_dialog_map"
-            android:alpha="0.8"
-            app:tint="@color/surface_container_low" />
+            android:layout_height="match_parent" />
 
         <!-- Floating Filters -->
         <HorizontalScrollView

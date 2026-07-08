@@ -163,12 +163,15 @@
 
                 <!-- 1. Morning Coffee Walk -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_event_coffee"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container">
+                    app:cardBackgroundColor="@color/md_theme_surface_container"
+                    android:clickable="true"
+                    android:focusable="true">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -233,6 +236,7 @@
                                 app:drawableStartCompat="@android:drawable/ic_dialog_map"
                                 app:drawableTint="@color/outline" />
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_join_coffee"
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:text="@string/hub_btn_join"
@@ -246,12 +250,15 @@
 
                 <!-- 2. Tech Innovators Scholarship -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_scholarship_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container">
+                    app:cardBackgroundColor="@color/md_theme_surface_container"
+                    android:clickable="true"
+                    android:focusable="true">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -322,6 +329,7 @@
                             android:drawablePadding="8dp"
                             app:drawableTint="@color/primary" />
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_register_scholarship_1"
                             android:layout_width="match_parent"
                             android:layout_height="52dp"
                             android:text="@string/hub_btn_register"
@@ -335,12 +343,15 @@
 
                 <!-- 3. Gallery Mixer -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_event_gallery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container">
+                    app:cardBackgroundColor="@color/md_theme_surface_container"
+                    android:clickable="true"
+                    android:focusable="true">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -405,6 +416,7 @@
                                 app:drawableStartCompat="@android:drawable/ic_dialog_map"
                                 app:drawableTint="@color/outline" />
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_join_gallery"
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:text="@string/hub_btn_join"
@@ -418,12 +430,15 @@
 
                 <!-- 4. Design Leadership Program (CLOSED) -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_scholarship_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container">
+                    app:cardBackgroundColor="@color/md_theme_surface_container"
+                    android:clickable="true"
+                    android:focusable="true">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -473,8 +488,7 @@
                             android:text="@string/hub_program_title"
                             android:textColor="@color/primary"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="12dp" />
+                            android:textStyle="bold"                                    android:layout_marginTop="12dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -493,6 +507,7 @@
                             android:drawablePadding="8dp"
                             app:drawableTint="@color/outline" />
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_closed_scholarship_2"
                             android:layout_width="match_parent"
                             android:layout_height="52dp"
                             android:text="@string/hub_btn_closed"
@@ -507,12 +522,15 @@
 
                 <!-- 5. Farm to Table Dinner -->
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_event_dinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container">
+                    app:cardBackgroundColor="@color/md_theme_surface_container"
+                    android:clickable="true"
+                    android:focusable="true">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -577,6 +595,7 @@
                                 app:drawableStartCompat="@android:drawable/ic_dialog_map"
                                 app:drawableTint="@color/outline" />
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_join_dinner"
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:text="@string/hub_btn_join"

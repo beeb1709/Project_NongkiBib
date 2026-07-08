@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
@@ -20,6 +21,15 @@ class ProfileFragment : Fragment() {
         val menuSettings = view.findViewById<View>(R.id.menu_settings)
         val btnNotifications = view.findViewById<ImageView>(R.id.btn_notifications)
         val btnLogout = view.findViewById<View>(R.id.btn_logout)
+
+        val tvName = view.findViewById<TextView>(R.id.tv_profile_name)
+        val tvStatus = view.findViewById<TextView>(R.id.tv_profile_status)
+
+        val user = SessionManager(requireContext()).getUser()
+        if (user != null) {
+            tvName.text = user.name
+            tvStatus.text = user.ktmStatus
+        }
 
         menuSettings.setOnClickListener {
             val intent = Intent(requireContext(), SettingsActivity::class.java)
@@ -38,6 +48,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun logout() {
+        SessionManager(requireContext()).clearSession()
         Toast.makeText(requireContext(), "Berhasil Keluar", Toast.LENGTH_SHORT).show()
         
         // Kembali ke AuthActivity (Halaman Login)
